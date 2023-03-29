@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}URL Shortener{% endblock %}
+
+{% block content %}
+<style>
+    h1{
+        text-align: center;
+        text-decoration: underline;
+        text-shadow: 3px 3px 8px rgb(27, 27, 27);
+        color: aliceblue;
+    }
+    label{
+        font-size: large;
+        font-weight: bold;
+    }
+    h4{
+        color: rgb(160, 12, 118);
+        font-weight: bolder;
+    }
+    
+</style>
+
+<h1 style="text-align: center;">!!URL Shortener!!</h1>
+<center>
+    
+    <br>
+    <form action="/" , method="post">
+        <label for="url_link">Enter the URL</label>
+        <br><br>
+        <input type="url" name="url_link" id="url_link" placeholder="https://domain.com" size="50">
+        <br><br>
+        <input type="submit" value="Short URL" class="btn btn-primary">
+    </form>
+    <br>
+    {% if short_url_display %}
+    
+    <h2>Copy the Short URL</h2>
+    <br>
+    <h4>http://127.0.0.1:5000/{{short_url_display}}</h4>
+
+    {% endif %}
+</center>
+{% endblock %}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>{% block title %} {% endblock %}</title>
+<style>
+    nav{
+        height: 80px;
+        width: 100%;
+       
+    }
+#home{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#history{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; 
+}
+body{
+    height: 150%;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 240px;
+    background-color: rgb(107, 214, 250) ;
+    
+}
+a{
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Home <img src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/blue_repicthousebase_1484336386-1.png" id="home"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <a class="navbar-brand" aria-current="page" href="/history">History <img src="https://cdn-icons-png.flaticon.com/512/5582/5582334.png" id="history"></a>
+                </div>
+            </div>
+        </nav>
+        
+        <br>
+        {% block content%}
+        {% endblock %}
+    </div>
+</body>
+</html>
